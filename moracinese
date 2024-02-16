@@ -1,0 +1,23 @@
+//in ingresso due nomi con cui identificherà i due giocatori. I nomi verranno memorizzati in variabili
+//di tipo string. Al primo giocatore è richiesto di inserire una parola tra "forbice", "carta" o "pietra".
+//Al secondo giocatore viene chiesta la medesima cosa. Il programma dovrà restituire in output il
+//nome del vincitore. Se la parola in ingresso non è una delle tre previste il programma dovrà avvisare
+//che è stato commesso un errore.
+
+public class Main {
+  public static void main(final String[] args) {
+    Scanner in = new Scanner(System.in);
+
+    System.out.println("Inserisci la tua scelta tra carta, forbice; sasso");
+    String giocatore1 = in.nextLine();
+
+    System.out.println("Inserisci la tua scelta tra carta, forbice;");
+    String giocatore2 = in.nextLine();
+
+    if (giocatore1.equals("carta") && giocatore2.equals("forbice")) {
+      System.out.println("Ha vinto il giocatore 2");
+    } else if (giocatore1.equals("forbice") && giocatore2.equals("carta")) {
+      System.out.println("Ha vinto il giocatore 1");
+    }
+  }
+}
